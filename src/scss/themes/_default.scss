@@ -1,0 +1,165 @@
+// 기본 테마
+.slidekit-container.theme-default {
+  --theme-primary-color: #{$primary-color};
+  --theme-secondary-color: #{$secondary-color};
+  --theme-accent-color: #{$accent-color};
+  --theme-background-color: #{$background-color};
+  --theme-text-color: #{$text-color};
+  
+  --theme-heading-font: #{$font-family-heading};
+  --theme-body-font: #{$font-family-body};
+  --theme-code-font: #{$font-family-code};
+  
+  --theme-slide-padding: #{$slide-padding};
+  
+  color: var(--theme-text-color);
+  background-color: var(--theme-background-color);
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--theme-heading-font);
+    color: var(--theme-primary-color);
+  }
+  
+  a {
+    color: var(--theme-accent-color);
+    text-decoration: none;
+    
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  
+  code, pre {
+    font-family: var(--theme-code-font);
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 3px;
+  }
+  
+  pre {
+    padding: 1em;
+    overflow: auto;
+  }
+  
+  code {
+    padding: 0.2em 0.4em;
+  }
+  
+  blockquote {
+    border-left: 4px solid var(--theme-accent-color);
+    margin-left: 0;
+    padding-left: 1em;
+    color: var(--theme-secondary-color);
+  }
+  
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+    
+    th {
+      background-color: rgba(0, 0, 0, 0.05);
+      text-align: left;
+    }
+    
+    tr:nth-child(even) {
+      background-color: rgba(0, 0, 0, 0.02);
+    }
+  }
+}
+
+// 다크 테마
+.slidekit-container.theme-dark {
+  --theme-primary-color: #e0e0e0;
+  --theme-secondary-color: #bbb;
+  --theme-accent-color: #3498db;
+  --theme-background-color: #222;
+  --theme-text-color: #eee;
+  
+  --theme-heading-font: #{$font-family-heading};
+  --theme-body-font: #{$font-family-body};
+  --theme-code-font: #{$font-family-code};
+  
+  --theme-slide-padding: #{$slide-padding};
+  
+  color: var(--theme-text-color);
+  background-color: var(--theme-background-color);
+  
+  code, pre {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  table {
+    th, td {
+      border-color: #444;
+    }
+    
+    th {
+      background-color: rgba(255, 255, 255, 0.05);
+    }
+    
+    tr:nth-child(even) {
+      background-color: rgba(255, 255, 255, 0.02);
+    }
+  }
+}
+
+// 라이트 테마
+.slidekit-container.theme-light {
+  --theme-primary-color: #333;
+  --theme-secondary-color: #555;
+  --theme-accent-color: #e74c3c;
+  --theme-background-color: #f9f9f9;
+  --theme-text-color: #222;
+  
+  --theme-heading-font: #{$font-family-heading};
+  --theme-body-font: #{$font-family-body};
+  --theme-code-font: #{$font-family-code};
+}
+
+// 모던 테마
+.slidekit-container.theme-modern {
+  --theme-primary-color: #333;
+  --theme-secondary-color: #555;
+  --theme-accent-color: #9b59b6;
+  --theme-background-color: #fff;
+  --theme-text-color: #333;
+  
+  --theme-heading-font: 'Montserrat', #{$font-family-heading};
+  --theme-body-font: 'Open Sans', #{$font-family-body};
+  --theme-code-font: #{$font-family-code};
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+  }
+  
+  .slide {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+  }
+}
+
+// 미니멀 테마
+.slidekit-container.theme-minimal {
+  --theme-primary-color: #333;
+  --theme-secondary-color: #666;
+  --theme-accent-color: #333;
+  --theme-background-color: #fff;
+  --theme-text-color: #333;
+  
+  --theme-heading-font: #{$font-family-heading};
+  --theme-body-font: #{$font-family-body};
+  --theme-code-font: #{$font-family-code};
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 300;
+  }
+  
+  blockquote {
+    border-left: 1px solid #ddd;
+    font-style: italic;
+  }
+} 

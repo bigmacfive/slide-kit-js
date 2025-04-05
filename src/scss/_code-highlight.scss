@@ -1,0 +1,198 @@
+/* 코드 하이라이트 기본 스타일 */
+pre code {
+  display: block;
+  padding: 1em;
+  overflow-x: auto;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  font-family: $font-family-code;
+  font-size: 0.9em;
+  line-height: 1.5;
+}
+
+/* 다크 테마에서의 코드 하이라이트 */
+.theme-dark pre code {
+  background-color: #2d2d2d;
+  color: #e0e0e0;
+}
+
+/* 코드 하이라이트의 라인 번호 */
+.line-numbers pre code {
+  counter-reset: line;
+}
+
+.line-numbers pre code > span {
+  counter-increment: line;
+}
+
+.line-numbers pre code > span::before {
+  content: counter(line);
+  display: inline-block;
+  width: 1.5em;
+  border-right: 1px solid #ddd;
+  padding: 0 0.5em;
+  margin-right: 0.5em;
+  color: #888;
+  text-align: right;
+}
+
+/* 테마 관련 색상 (highlight.js 호환) */
+.theme-default {
+  /* 기본 Highlight.js 테마 스타일 */
+  .hljs-comment,
+  .hljs-quote {
+    color: #998;
+    font-style: italic;
+  }
+
+  .hljs-keyword,
+  .hljs-selector-tag,
+  .hljs-subst {
+    color: #333;
+    font-weight: bold;
+  }
+
+  .hljs-number,
+  .hljs-literal,
+  .hljs-variable,
+  .hljs-template-variable,
+  .hljs-tag .hljs-attr {
+    color: #008080;
+  }
+
+  .hljs-string,
+  .hljs-doctag {
+    color: #d14;
+  }
+
+  .hljs-title,
+  .hljs-section,
+  .hljs-selector-id {
+    color: #900;
+    font-weight: bold;
+  }
+
+  .hljs-subst {
+    font-weight: normal;
+  }
+
+  .hljs-type,
+  .hljs-class .hljs-title {
+    color: #458;
+    font-weight: bold;
+  }
+
+  .hljs-tag,
+  .hljs-name,
+  .hljs-attribute {
+    color: #000080;
+    font-weight: normal;
+  }
+
+  .hljs-regexp,
+  .hljs-link {
+    color: #009926;
+  }
+
+  .hljs-symbol,
+  .hljs-bullet {
+    color: #990073;
+  }
+
+  .hljs-built_in,
+  .hljs-builtin-name {
+    color: #0086b3;
+  }
+
+  .hljs-meta {
+    color: #999;
+    font-weight: bold;
+  }
+
+  .hljs-deletion {
+    background: #fdd;
+  }
+
+  .hljs-addition {
+    background: #dfd;
+  }
+
+  .hljs-emphasis {
+    font-style: italic;
+  }
+
+  .hljs-strong {
+    font-weight: bold;
+  }
+}
+
+/* 다크 테마에서의 하이라이트 색상 */
+.theme-dark {
+  .hljs-comment,
+  .hljs-quote {
+    color: #7f9f7f;
+  }
+
+  .hljs-keyword,
+  .hljs-selector-tag,
+  .hljs-subst {
+    color: #f0dfaf;
+  }
+
+  .hljs-number,
+  .hljs-literal,
+  .hljs-variable,
+  .hljs-template-variable,
+  .hljs-tag .hljs-attr {
+    color: #8cd0d3;
+  }
+
+  .hljs-string,
+  .hljs-doctag {
+    color: #cc9393;
+  }
+
+  .hljs-title,
+  .hljs-section,
+  .hljs-selector-id {
+    color: #efef8f;
+  }
+
+  .hljs-type,
+  .hljs-class .hljs-title {
+    color: #efef8f;
+  }
+
+  .hljs-tag,
+  .hljs-name,
+  .hljs-attribute {
+    color: #8fbede;
+  }
+
+  .hljs-regexp,
+  .hljs-link {
+    color: #e89393;
+  }
+
+  .hljs-symbol,
+  .hljs-bullet {
+    color: #dca3a3;
+  }
+
+  .hljs-built_in,
+  .hljs-builtin-name {
+    color: #dcdccc;
+  }
+
+  .hljs-meta {
+    color: #7f9f7f;
+  }
+
+  .hljs-deletion {
+    background: #5f3f3f;
+  }
+
+  .hljs-addition {
+    background: #487d49;
+  }
+} 

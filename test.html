@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SlideKit 모던 테스트</title>
+  <link rel="stylesheet" href="dist/slidekit.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    /* 추가 스타일 (필요시) */
+  </style>
+</head>
+<body>
+  <div class="slidekit-container">
+    <!-- 타이틀 슬라이드 -->
+    <div class="slide title-slide">
+      <h1 class="fade-in">SlideKit</h1>
+      <p class="text-light fade-in-up">모던 HTML 프레젠테이션 라이브러리</p>
+      <div class="mt-5 d-flex fade-in-up" style="gap: 1rem;">
+        <div class="rounded bg-light p-3 shadow-sm">
+          <i class="fas fa-code text-primary" style="font-size: 2rem;"></i>
+        </div>
+        <div class="rounded bg-light p-3 shadow-sm">
+          <i class="fas fa-paint-brush text-accent" style="font-size: 2rem;"></i>
+        </div>
+        <div class="rounded bg-light p-3 shadow-sm">
+          <i class="fas fa-cogs text-secondary" style="font-size: 2rem;"></i>
+        </div>
+      </div>
+    </div>
+    
+    <!-- 소개 슬라이드 -->
+    <div class="slide">
+      <h2 class="fade-in">모던 슬라이드 라이브러리</h2>
+      <p class="text-light fade-in-up">SlideKit은 웹 표준 기술을 활용한 현대적인 프레젠테이션 도구입니다.</p>
+      
+      <div class="card-layout mt-4">
+        <div class="card fade-in-up">
+          <div class="card-icon"><i class="fas fa-laptop-code"></i></div>
+          <h3>HTML 기반</h3>
+          <p>표준 웹 기술로 만드는 프레젠테이션</p>
+        </div>
+        
+        <div class="card fade-in-up" style="animation-delay: 0.2s;">
+          <div class="card-icon"><i class="fas fa-mobile-alt"></i></div>
+          <h3>반응형 디자인</h3>
+          <p>모든 디바이스에서 완벽하게 작동</p>
+        </div>
+        
+        <div class="card fade-in-up" style="animation-delay: 0.4s;">
+          <div class="card-icon"><i class="fas fa-palette"></i></div>
+          <h3>테마 시스템</h3>
+          <p>다양한 테마와 사용자 정의 옵션</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- 기능 슬라이드 -->
+    <div class="slide two-columns">
+      <div>
+        <h2 class="fade-in">주요 기능</h2>
+        <ul>
+          <li class="fade-in-left" style="animation-delay: 0.1s;">아름다운 애니메이션 효과</li>
+          <li class="fade-in-left" style="animation-delay: 0.2s;">진행 표시줄 지원</li>
+          <li class="fade-in-left" style="animation-delay: 0.3s;">키보드 및 스와이프 내비게이션</li>
+          <li class="fade-in-left" style="animation-delay: 0.4s;">반응형 디자인</li>
+          <li class="fade-in-left" style="animation-delay: 0.5s;">사용자 정의 이벤트 시스템</li>
+          <li class="fade-in-left" style="animation-delay: 0.6s;">자동 재생 기능</li>
+        </ul>
+      </div>
+      <div class="d-flex justify-content-center align-items-center">
+        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&q=80" alt="프레젠테이션 이미지" class="rounded shadow fade-in-right">
+      </div>
+    </div>
+    
+    <!-- 코드 예제 슬라이드 -->
+    <div class="slide">
+      <h2 class="fade-in">쉬운 사용법</h2>
+      <div class="two-columns mt-4">
+        <div>
+          <p class="fade-in-up">몇 줄의 코드만으로 멋진 프레젠테이션을 만들 수 있습니다:</p>
+          <pre class="fade-in-up"><code>
+// SlideKit 초기화
+const presentation = new SlideKit.Presentation({
+  showProgress: true,
+  theme: 'default',
+  animateItems: true
+});
+
+// 프레젠테이션 시작
+presentation.init();
+
+// 이벤트 리스너 등록
+presentation.on('slideChanged', function(event) {
+  console.log('슬라이드 변경:', event.detail);
+});
+          </code></pre>
+        </div>
+        <div class="d-flex flex-column justify-content-center">
+          <blockquote class="fade-in-right">
+            <p>SlideKit은 개발자 친화적인 API로 복잡한 프레젠테이션도 쉽게 만들 수 있습니다.</p>
+          </blockquote>
+          <div class="bg-light p-3 rounded shadow-sm text-center mt-4 fade-in-right" style="animation-delay: 0.2s;">
+            <i class="fas fa-code text-primary mb-2" style="font-size: 2rem;"></i>
+            <p class="mb-0">최소한의 코드, 최대한의 효과</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- 애니메이션 슬라이드 -->
+    <div class="slide bg-light">
+      <h2 class="text-center fade-in">애니메이션 효과</h2>
+      <p class="text-center text-light fade-in-up">다양한 애니메이션 클래스로 콘텐츠에 생동감을 더해보세요</p>
+      
+      <div class="d-flex justify-content-around align-items-center mt-5 flex-wrap" style="gap: 1rem;">
+        <div class="bg-white p-3 rounded shadow fade-in" style="width: 180px; text-align: center;">
+          <div class="mb-3 text-primary"><i class="fas fa-star" style="font-size: 2rem;"></i></div>
+          <h3 class="mb-1">Fade In</h3>
+          <p class="text-light mb-0">기본 페이드인</p>
+        </div>
+        
+        <div class="bg-white p-3 rounded shadow fade-in-up" style="width: 180px; text-align: center;">
+          <div class="mb-3 text-accent"><i class="fas fa-arrow-up" style="font-size: 2rem;"></i></div>
+          <h3 class="mb-1">Fade Up</h3>
+          <p class="text-light mb-0">아래에서 위로</p>
+        </div>
+        
+        <div class="bg-white p-3 rounded shadow fade-in-down" style="width: 180px; text-align: center;">
+          <div class="mb-3 text-secondary"><i class="fas fa-arrow-down" style="font-size: 2rem;"></i></div>
+          <h3 class="mb-1">Fade Down</h3>
+          <p class="text-light mb-0">위에서 아래로</p>
+        </div>
+        
+        <div class="bg-white p-3 rounded shadow fade-in-left" style="width: 180px; text-align: center;">
+          <div class="mb-3 text-primary"><i class="fas fa-arrow-left" style="font-size: 2rem;"></i></div>
+          <h3 class="mb-1">Fade Left</h3>
+          <p class="text-light mb-0">오른쪽에서 왼쪽으로</p>
+        </div>
+        
+        <div class="bg-white p-3 rounded shadow fade-in-right" style="width: 180px; text-align: center;">
+          <div class="mb-3 text-accent"><i class="fas fa-arrow-right" style="font-size: 2rem;"></i></div>
+          <h3 class="mb-1">Fade Right</h3>
+          <p class="text-light mb-0">왼쪽에서 오른쪽으로</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- 테마 슬라이드 -->
+    <div class="slide">
+      <h2 class="fade-in">테마 시스템</h2>
+      <p class="fade-in-up">프레젠테이션 스타일을 쉽게 변경할 수 있습니다</p>
+      
+      <div class="d-flex justify-content-between flex-wrap mt-4">
+        <div class="p-3 rounded shadow-sm text-center fade-in-up" style="width: 23%; background-color: var(--primary-color); color: white;">
+          <h3 class="mb-1">Primary</h3>
+          <div class="opacity-75">#4361ee</div>
+        </div>
+        
+        <div class="p-3 rounded shadow-sm text-center fade-in-up" style="width: 23%; background-color: var(--secondary-color); color: white; animation-delay: 0.1s;">
+          <h3 class="mb-1">Secondary</h3>
+          <div class="opacity-75">#3a0ca3</div>
+        </div>
+        
+        <div class="p-3 rounded shadow-sm text-center fade-in-up" style="width: 23%; background-color: var(--accent-color); color: white; animation-delay: 0.2s;">
+          <h3 class="mb-1">Accent</h3>
+          <div class="opacity-75">#f72585</div>
+        </div>
+        
+        <div class="p-3 rounded shadow-sm text-center fade-in-up" style="width: 23%; background-color: var(--text-color); color: white; animation-delay: 0.3s;">
+          <h3 class="mb-1">Text</h3>
+          <div class="opacity-75">#2b2d42</div>
+        </div>
+      </div>
+      
+      <div class="mt-4">
+        <table class="fade-in-up" style="animation-delay: 0.5s;">
+          <thead>
+            <tr>
+              <th>테마 이름</th>
+              <th>설명</th>
+              <th>사용법</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Default</td>
+              <td>기본 테마</td>
+              <td><code>theme: 'default'</code></td>
+            </tr>
+            <tr>
+              <td>Dark</td>
+              <td>어두운 배경의 테마</td>
+              <td><code>theme: 'dark'</code></td>
+            </tr>
+            <tr>
+              <td>Light</td>
+              <td>밝은 색상의 테마</td>
+              <td><code>theme: 'light'</code></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    
+    <!-- 마지막 슬라이드 -->
+    <div class="slide title-slide">
+      <h1 class="fade-in">지금 시작해보세요!</h1>
+      <p class="text-light fade-in-up">SlideKit으로 인상적인 프레젠테이션을 만들어보세요</p>
+      
+      <div class="d-flex mt-5 fade-in-up" style="gap: 1.5rem;">
+        <a href="#" class="d-flex align-items-center p-3 rounded bg-primary text-white shadow" style="text-decoration: none;">
+          <i class="fas fa-download me-2" style="margin-right: 10px;"></i>
+          <span>라이브러리 다운로드</span>
+        </a>
+        
+        <a href="#" class="d-flex align-items-center p-3 rounded bg-light text-primary shadow" style="text-decoration: none;">
+          <i class="fas fa-book me-2" style="margin-right: 10px;"></i>
+          <span>문서 보기</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script src="dist/slidekit.js"></script>
+  <script>
+    // SlideKit 초기화
+    document.addEventListener('DOMContentLoaded', function() {
+      const presentation = new SlideKit.Presentation({
+        showProgress: true,
+        showControls: true,
+        animateItems: true
+      });
+      
+      presentation.init();
+      
+      // 슬라이드 변경 이벤트 리스너
+      presentation.on('slideChanged', function(event) {
+        console.log('슬라이드 변경됨:', event.detail);
+      });
+    });
+  </script>
+</body>
+</html> 

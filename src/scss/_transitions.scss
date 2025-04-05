@@ -1,0 +1,209 @@
+// 기본 전환 설정
+.slide {
+  transition: transform $transition-duration $transition-easing,
+              opacity $transition-duration $transition-easing;
+}
+
+// 3D 전환 효과 활성화를 위한 클래스
+.enable-3d {
+  perspective: 1000px;
+  perspective-origin: center;
+}
+
+// 페이드 전환 효과
+.transition-fade {
+  animation: fadeIn $transition-duration $transition-easing;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+// 슬라이드 전환 효과
+.transition-slide-left-in {
+  animation: slideLeftIn $transition-duration $transition-easing;
+}
+
+.transition-slide-left-out {
+  animation: slideLeftOut $transition-duration $transition-easing;
+}
+
+.transition-slide-right-in {
+  animation: slideRightIn $transition-duration $transition-easing;
+}
+
+.transition-slide-right-out {
+  animation: slideRightOut $transition-duration $transition-easing;
+}
+
+@keyframes slideLeftIn {
+  from { transform: translate(100%, -50%); }
+  to { transform: translate(-50%, -50%); }
+}
+
+@keyframes slideLeftOut {
+  from { transform: translate(-50%, -50%); }
+  to { transform: translate(-100%, -50%); }
+}
+
+@keyframes slideRightIn {
+  from { transform: translate(-100%, -50%); }
+  to { transform: translate(-50%, -50%); }
+}
+
+@keyframes slideRightOut {
+  from { transform: translate(-50%, -50%); }
+  to { transform: translate(100%, -50%); }
+}
+
+// 줌 전환 효과
+.transition-zoom-in-in {
+  animation: zoomIn $transition-duration $transition-easing;
+}
+
+.transition-zoom-in-out {
+  animation: zoomInOut $transition-duration $transition-easing;
+}
+
+.transition-zoom-out-in {
+  animation: zoomOutIn $transition-duration $transition-easing;
+}
+
+.transition-zoom-out-out {
+  animation: zoomOutOut $transition-duration $transition-easing;
+}
+
+@keyframes zoomIn {
+  from { transform: translate(-50%, -50%) scale(0.5); opacity: 0; }
+  to { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+}
+
+@keyframes zoomInOut {
+  from { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+  to { transform: translate(-50%, -50%) scale(1.5); opacity: 0; }
+}
+
+@keyframes zoomOutIn {
+  from { transform: translate(-50%, -50%) scale(1.5); opacity: 0; }
+  to { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+}
+
+@keyframes zoomOutOut {
+  from { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+  to { transform: translate(-50%, -50%) scale(0.5); opacity: 0; }
+}
+
+// 플립 전환 효과
+.transition-flip-left-in {
+  animation: flipLeftIn $transition-duration $transition-easing;
+  transform-origin: left center;
+  backface-visibility: hidden;
+}
+
+.transition-flip-left-out {
+  animation: flipLeftOut $transition-duration $transition-easing;
+  transform-origin: left center;
+  backface-visibility: hidden;
+}
+
+.transition-flip-right-in {
+  animation: flipRightIn $transition-duration $transition-easing;
+  transform-origin: right center;
+  backface-visibility: hidden;
+}
+
+.transition-flip-right-out {
+  animation: flipRightOut $transition-duration $transition-easing;
+  transform-origin: right center;
+  backface-visibility: hidden;
+}
+
+@keyframes flipLeftIn {
+  from { transform: translate(-50%, -50%) rotateY(-90deg); opacity: 0; }
+  to { transform: translate(-50%, -50%) rotateY(0deg); opacity: 1; }
+}
+
+@keyframes flipLeftOut {
+  from { transform: translate(-50%, -50%) rotateY(0deg); opacity: 1; }
+  to { transform: translate(-50%, -50%) rotateY(90deg); opacity: 0; }
+}
+
+@keyframes flipRightIn {
+  from { transform: translate(-50%, -50%) rotateY(90deg); opacity: 0; }
+  to { transform: translate(-50%, -50%) rotateY(0deg); opacity: 1; }
+}
+
+@keyframes flipRightOut {
+  from { transform: translate(-50%, -50%) rotateY(0deg); opacity: 1; }
+  to { transform: translate(-50%, -50%) rotateY(-90deg); opacity: 0; }
+}
+
+// 큐브 전환 효과
+.transition-cube-left-in {
+  animation: cubeLeftIn $transition-duration $transition-easing;
+  transform-origin: left center;
+  backface-visibility: hidden;
+}
+
+.transition-cube-left-out {
+  animation: cubeLeftOut $transition-duration $transition-easing;
+  transform-origin: right center;
+  backface-visibility: hidden;
+}
+
+.transition-cube-right-in {
+  animation: cubeRightIn $transition-duration $transition-easing;
+  transform-origin: right center;
+  backface-visibility: hidden;
+}
+
+.transition-cube-right-out {
+  animation: cubeRightOut $transition-duration $transition-easing;
+  transform-origin: left center;
+  backface-visibility: hidden;
+}
+
+@keyframes cubeLeftIn {
+  from {
+    transform: translate(-100%, -50%) rotateY(-90deg);
+    opacity: 0.5;
+  }
+  to {
+    transform: translate(-50%, -50%) rotateY(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes cubeLeftOut {
+  from {
+    transform: translate(-50%, -50%) rotateY(0deg);
+    opacity: 1;
+  }
+  to {
+    transform: translate(0%, -50%) rotateY(90deg);
+    opacity: 0.5;
+  }
+}
+
+@keyframes cubeRightIn {
+  from {
+    transform: translate(0%, -50%) rotateY(90deg);
+    opacity: 0.5;
+  }
+  to {
+    transform: translate(-50%, -50%) rotateY(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes cubeRightOut {
+  from {
+    transform: translate(-50%, -50%) rotateY(0deg);
+    opacity: 1;
+  }
+  to {
+    transform: translate(-100%, -50%) rotateY(-90deg);
+    opacity: 0.5;
+  }
+} 

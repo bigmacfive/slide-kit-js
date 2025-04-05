@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SlideKit 기본 예제</title>
+  <link rel="stylesheet" href="../dist/slidekit.css">
+  <style>
+    /* 추가 스타일링 */
+    .logo {
+      max-width: 200px;
+      margin-bottom: 20px;
+    }
+    .feature-slide img {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="slidekit-container">
+    <!-- 타이틀 슬라이드 -->
+    <div class="slide title-slide" data-transition="fade">
+      <h1>SlideKit</h1>
+      <p class="text-xl">HTML 기반 프레젠테이션 라이브러리</p>
+      <p class="text-secondary mt-4">클릭하거나 화살표 키를 눌러 다음 슬라이드로 이동하세요</p>
+    </div>
+    
+    <!-- 소개 슬라이드 -->
+    <div class="slide" data-transition="slide">
+      <h2>SlideKit이란?</h2>
+      <p>SlideKit은 웹 기반 프레젠테이션을 쉽게 만들 수 있는 자바스크립트 라이브러리입니다.</p>
+      <ul class="mt-3">
+        <li>HTML/CSS/JS 기반 - 웹 개발자에게 친숙한 도구</li>
+        <li>반응형 디자인 - 모든 화면 크기에서 잘 작동</li>
+        <li>다양한 테마와 전환 효과</li>
+        <li>마크다운 지원</li>
+        <li>코드 구문 강조</li>
+      </ul>
+    </div>
+    
+    <!-- 기능 소개 슬라이드 -->
+    <div class="slide two-columns">
+      <div>
+        <h2>주요 기능</h2>
+        <ul>
+          <li>다양한 슬라이드 레이아웃</li>
+          <li>키보드 네비게이션</li>
+          <li>터치 스와이프 지원</li>
+          <li>발표자 모드</li>
+          <li>테마 시스템</li>
+          <li>플러그인 아키텍처</li>
+        </ul>
+      </div>
+      <div class="d-flex justify-content-center align-items-center">
+        <img src="https://via.placeholder.com/300" alt="기능 이미지" class="img-contain">
+      </div>
+    </div>
+    
+    <!-- 마크다운 슬라이드 -->
+    <div class="slide" data-markdown>
+# 마크다운 지원
+
+SlideKit은 **마크다운**을 지원합니다:
+
+- 목록 항목 1
+- 목록 항목 2
+  - 중첩 목록
+  - 중첩 목록 2
+
+```javascript
+// 코드 블록도 지원합니다
+function hello() {
+  console.log('Hello, SlideKit!');
+}
+```
+
+> 인용구도 사용할 수 있습니다.
+    </div>
+    
+    <!-- 코드 하이라이트 슬라이드 -->
+    <div class="slide">
+      <h2>코드 구문 강조</h2>
+      <pre><code class="language-javascript">
+import { Presentation } from 'slidekit';
+
+// 프레젠테이션 초기화
+const presentation = new SlideKit.Presentation({
+  container: '.slidekit-container',
+  theme: 'default',
+  transition: 'fade'
+});
+
+// 프레젠테이션 시작
+presentation.init();
+      </code></pre>
+    </div>
+    
+    <!-- 테마 슬라이드 -->
+    <div class="slide">
+      <h2>테마 시스템</h2>
+      <p>SlideKit은 다양한 테마를 지원합니다:</p>
+      <div class="d-flex justify-content-between mt-4">
+        <div class="p-2 bg-primary text-white" style="width: 18%;">기본 테마</div>
+        <div class="p-2" style="width: 18%; background: #222; color: #eee;">다크 테마</div>
+        <div class="p-2" style="width: 18%; background: #f9f9f9; color: #333;">라이트 테마</div>
+        <div class="p-2" style="width: 18%; background: #fff; color: #333; box-shadow: 0 3px 10px rgba(0,0,0,0.1);">모던 테마</div>
+        <div class="p-2" style="width: 18%; background: #fff; color: #333; border: 1px solid #eee;">미니멀 테마</div>
+      </div>
+      <p class="mt-4 text-center">사용자 정의 테마도 만들 수 있습니다!</p>
+    </div>
+    
+    <!-- 전환 효과 슬라이드 -->
+    <div class="slide" data-transition="zoom">
+      <h2>전환 효과</h2>
+      <p>다양한 전환 효과를 사용할 수 있습니다:</p>
+      <ul class="d-flex justify-content-between flex-wrap mt-3">
+        <li style="width: 30%;" class="p-2">페이드</li>
+        <li style="width: 30%;" class="p-2">슬라이드</li>
+        <li style="width: 30%;" class="p-2">줌</li>
+        <li style="width: 30%;" class="p-2">플립</li>
+        <li style="width: 30%;" class="p-2">큐브</li>
+        <li style="width: 30%;" class="p-2">없음</li>
+      </ul>
+      <p class="text-center mt-4">각 슬라이드마다 다른 전환 효과를 지정할 수 있습니다!</p>
+    </div>
+    
+    <!-- 발표자 모드 슬라이드 -->
+    <div class="slide">
+      <h2>발표자 모드</h2>
+      <div class="d-flex justify-content-center">
+        <img src="https://via.placeholder.com/600x300" alt="발표자 모드 이미지" class="img-contain mb-3">
+      </div>
+      <p class="text-center">Alt + P를 눌러 발표자 모드를 활성화할 수 있습니다.</p>
+      <div class="notes">
+        발표자 노트 예시입니다. 이 텍스트는 발표자 모드에서만 볼 수 있습니다.
+      </div>
+    </div>
+    
+    <!-- 플러그인 슬라이드 -->
+    <div class="slide">
+      <h2>플러그인 시스템</h2>
+      <p>SlideKit은 확장 가능한 플러그인 시스템을 제공합니다:</p>
+      <pre><code class="language-javascript">
+// 간단한 플러그인 예시
+const timerPlugin = SlideKit.Plugins.createPlugin({
+  name: 'timer',
+  init: function(presentation) {
+    // 타이머 초기화
+    console.log('타이머 플러그인 초기화');
+  },
+  destroy: function(presentation) {
+    // 정리 작업
+  },
+  handleEvent: function(eventName, data, presentation) {
+    // 이벤트 처리
+    if (eventName === 'slideChanged') {
+      console.log(`새 슬라이드: ${data.currentIndex}`);
+    }
+  }
+});
+
+// 플러그인 등록
+presentation.plugins.register(timerPlugin);
+      </code></pre>
+    </div>
+    
+    <!-- 마지막 슬라이드 -->
+    <div class="slide title-slide" data-transition="fade">
+      <h1>시작해 보세요!</h1>
+      <p class="text-xl">npm install slidekit</p>
+      <p class="mt-4">
+        <a href="#" class="text-accent">문서 보기</a> | 
+        <a href="#" class="text-accent">GitHub</a>
+      </p>
+    </div>
+  </div>
+
+  <script src="../dist/slidekit.js"></script>
+  <script>
+    // SlideKit 초기화
+    document.addEventListener('DOMContentLoaded', function() {
+      const presentation = new SlideKit.Presentation();
+      presentation.init();
+    });
+  </script>
+</body>
+</html> 

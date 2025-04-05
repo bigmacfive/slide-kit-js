@@ -1,0 +1,28 @@
+.notes {
+  display: none;
+  
+  /* 발표자 노트는 발표자 모드에서만 볼 수 있습니다 */
+}
+
+/* 발표자 모드 팝업은 자체 스타일을 가지고 있으므로 여기서는 일반 슬라이드쇼의 스타일만 정의합니다 */
+.alt-key-indicator {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-size: 0.8em;
+  z-index: 100;
+}
+
+/* Alt + P 단축키 안내 */
+.slidekit-container:hover .alt-key-indicator {
+  opacity: 1;
+}
+
+.slidekit-container .alt-key-indicator {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+} 
